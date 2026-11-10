@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سپهر ۳۶۰ | پلتفرم یکپارچه خدمات تبلیغاتی و چاپ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">سپهر ۳۶۰</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">خانه</a>
+                <a href="#services">خدمات</a>
+                <a href="#how">نحوه کار</a>
+                <a href="#order">سفارش</a>
+                <a href="#about">درباره ما</a>
+            </nav>
+            <button class="btn-primary mobile-order" onclick="scrollToOrder()">سفارش سریع</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>همه خدمات تبلیغاتی و چاپ<br><span class="highlight">در یک پلتفرم</span></h1>
+                <p class="hero-desc">
+                    از طراحی تا چاپ و تحویل — کارت ویزیت، بروشور، تراکت، بسته‌بندی و بیشتر.
+                    بدون دردسر، با کیفیت تضمینی و قیمت شفاف.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToOrder()">شروع سفارش</button>
+                    <button class="btn-secondary" onclick="openChat()">مشاوره رایگان با چت‌بات</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">+۵۰۰</span>
+                        <span class="stat-label">سفارش موفق</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">۹۸٪</span>
+                        <span class="stat-label">رضایت مشتری</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">۲۴س</span>
+                        <span class="stat-label">پاسخگویی</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="mockup-card">
+                    <div class="mockup-header">سفارش جدید</div>
+                    <div class="mockup-body">
+                        <div class="mockup-item">✓ کارت ویزیت لوکس</div>
+                        <div class="mockup-item">✓ طراحی اختصاصی</div>
+                        <div class="mockup-item">✓ چاپ با کیفیت</div>
+                        <div class="mockup-item">✓ تحویل در محل</div>
+                    </div>
+                    <div class="mockup-footer">آماده ارسال</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>خدمات سپهر ۳۶۰</h2>
+                <p>پکیج‌های کامل تبلیغاتی برای کسب‌وکارهای کوچک، فروشگاه‌ها، رستوران‌ها و استارتاپ‌ها</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>کارت ویزیت</h3>
+                    <p>طراحی و چاپ کارت ویزیت در انواع کاغذ و روکش (مات، براق، لمینت)</p>
+                    <span class="price">از ۴۵٬۰۰۰ تومان</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3>بروشور و تراکت</h3>
+                    <p>بروشورهای تا شونده و تراکت تبلیغاتی با کیفیت بالا</p>
+                    <span class="price">از ۸۰٬۰۰۰ تومان</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>بسته‌بندی</h3>
+                    <p>جعبه، پاکت و بسته‌بندی اختصاصی برای محصولات شما</p>
+                    <span class="price">از ۱۲۰٬۰۰۰ تومان</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>منوی رستوران</h3>
+                    <p>طراحی و چاپ منوی رستوران و کافه با مقاومت بالا</p>
+                    <span class="price">از ۹۵٬۰۰۰ تومان</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪧</div>
+                    <h3>بنر و استند</h3>
+                    <p>بنرهای تبلیغاتی، استند رومیزی و پاپ‌آپ</p>
+                    <span class="price">از ۱۵۰٬۰۰۰ تومان</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>طراحی اختصاصی</h3>
+                    <p>طراحی گرافیکی حرفه‌ای توسط تیم ما یا آپلود طرح خودتان</p>
+                    <span class="price">از ۲۰۰٬۰۰۰ تومان</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="how">
+        <div class="container">
+            <div class="section-header">
+                <h2>چطور کار می‌کند؟</h2>
+                <p>تنها در ۳ مرحله ساده سفارش خود را ثبت کنید</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">۱</div>
+                    <h3>انتخاب محصول</h3>
+                    <p>نوع محصول، تعداد، جنس کاغذ و زمان تحویل را انتخاب کنید</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">۲</div>
+                    <h3>ثبت سفارش</h3>
+                    <p>اطلاعات تماس و جزئیات را وارد کنید یا از طریق چت‌بات کمک بگیرید</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">۳</div>
+                    <h3>تحویل</h3>
+                    <p>سفارش شما طراحی، چاپ و در زمان مقرر تحویل داده می‌شود</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section id="order" class="order">
+        <div class="container">
+            <div class="section-header">
+                <h2>ثبت سفارش آنلاین</h2>
+                <p>فرم زیر را پر کنید تا کارشناسان ما با شما تماس بگیرند</p>
+            </div>
+            <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">نام و نام خانوادگی *</label>
+                        <input type="text" id="name" name="name" required placeholder="مثال: علی رضایی">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">شماره تماس *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="0912xxxxxxx">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">نوع خدمت *</label>
+                        <select id="service" name="service" required>
+                            <option value="">انتخاب کنید...</option>
+                            <option value="business-card">کارت ویزیت</option>
+                            <option value="brochure">بروشور / تراکت</option>
+                            <option value="packaging">بسته‌بندی</option>
+                            <option value="menu">منوی رستوران</option>
+                            <option value="banner">بنر و استند</option>
+                            <option value="design">طراحی اختصاصی</option>
+                            <option value="other">سایر</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">تعداد تقریبی</label>
+                        <input type="number" id="quantity" name="quantity" placeholder="مثال: ۵۰۰" min="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">توضیحات سفارش</label>
+                    <textarea id="message" name="message" rows="4" placeholder="جزئیات بیشتر، ابعاد، رنگ، زمان تحویل مورد نظر و..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-full">ثبت سفارش و درخواست تماس</button>
+            </form>
+            <div id="formSuccess" class="form-success" style="display:none;">
+                ✅ سفارش شما با موفقیت ثبت شد! به زودی با شما تماس می‌گیریم.
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Lean Startup note -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>درباره سپهر ۳۶۰</h2>
+                <p>
+                    سپهر ۳۶۰ با رویکرد <strong>استارتاپ ناب (Lean Startup)</strong> شروع به کار کرده است.
+                    به‌جای ساخت یک پلتفرم پیچیده از روز اول، ما با یک محصول حداقلی (MVP) شروع کردیم تا نیاز واقعی مشتریان را بشناسیم.
+                </p>
+                <p>
+                    تمرکز اولیه ما روی کسب‌وکارهای کوچک، فروشگاه‌ها، رستوران‌ها و شرکت‌های نوپا است.
+                    هدف ما کاهش ریسک، درک دقیق نیاز مشتری و ساخت یک مدل کسب‌وکار پایدار است.
+                </p>
+                <div class="lean-badge">
+                    <span>🔄</span> چرخه ساخت → اندازه‌گیری → یادگیری
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">✦</span> سپهر ۳۶۰
+                    <p>پلتفرم یکپارچه خدمات تبلیغاتی و چاپ</p>
+                </div>
+                <div class="footer-contact">
+                    <p>📧 info@sepehr360.ir</p>
+                    <p>📱 پشتیبانی از طریق چت‌بات</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ سپهر ۳۶۰ — تمامی حقوق محفوظ است | پروژه دانشجویی با رویکرد Lean Startup</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot" class="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-header-info">
+                <span class="chat-avatar">🤖</span>
+                <div>
+                    <strong>پشتیبان سپهر ۳۶۰</strong>
+                    <small>آنلاین | پاسخگویی فوری</small>
+                </div>
+            </div>
+            <button class="chat-close" id="chatCloseBtn">−</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="bubble">
+                        سلام! 👋 من دستیار هوشمند سپهر ۳۶۰ هستم.
+                        چطور می‌تونم کمکتون کنم؟
+                    </div>
+                </div>
+            </div>
+            <div class="quick-replies" id="quickReplies">
+                <button onclick="sendQuick('قیمت کارت ویزیت چقدر است؟')">قیمت کارت ویزیت</button>
+                <button onclick="sendQuick('چطور سفارش بدم؟')">نحوه سفارش</button>
+                <button onclick="sendQuick('زمان تحویل چقدر است؟')">زمان تحویل</button>
+                <button onclick="sendQuick('خدمات شما چیست؟')">خدمات</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="پیام خود را بنویسید..." onkeypress="handleChatKey(event)">
+                <button onclick="sendMessage()">ارسال</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatToggle" class="chat-toggle" onclick="openChat()">
+        <span>💬</span>
+        <span class="chat-badge">۱</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
