@@ -145,27 +145,56 @@ function scrollToOrder() {
     document.getElementById("order").scrollIntoView({ behavior: "smooth" });
 }
 
-function submitOrder(e) {
+async function submitOrder(e) {
     e.preventDefault();
-    
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const service = document.getElementById("service").value;
-    
-    if (!name || !phone || !service) {
+
+    const form = document.getElementById("orderForm");
+    const submitButton = form.querySelector('button[type="submit"]');
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const serviceSelect = document.getElementById("service");
+    const service = serviceSelect.options[serviceSelect.selectedIndex].text;
+    const quantity = document.getElementById("quantity").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !phone || !document.getElementById("service").value) {
         alert("لطفاً فیلدهای الزامی را پر کنید.");
         return;
     }
 
-    // Hide form, show success
-    document.getElementById("orderForm").style.display = "none";
-    document.getElementById("formSuccess").style.display = "block";
+    const orderData = {
+        name,
+        phone,
+        service,
+        description: [quantity ? "تعداد تقریبی: " + quantity : "", message]
+            .filter(Boolean).join("\\n") || "-",
+        source: "سایت پیکسلچی ۷۲۴"
+    };
 
-    // Optional: also notify in chatbot
-    setTimeout(() => {
-        openChat();
-        addMessage(`سفارش جدید ثبت شد!\nنام: ${name}\nتلفن: ${phone}\nخدمت: ${service}\n\nبه زودی با شما تماس می‌گیریم ✅`, false);
-    }, 800);
+    const originalButtonText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "در حال ثبت سفارش...";
+
+    try {
+        await fetch("https://script.google.com/macros/s/AKfycbwO1bxNmXoZ-FwLetoP_HaOlREPmF_mnn__UnV1YNB0XNei7PFMMWY4c07E-fqY1Syv/exec", {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(orderData)
+        });
+
+        form.style.display = "none";
+        document.getElementById("formSuccess").style.display = "block";
+
+        setTimeout(() => {
+            openChat();
+            addMessage(`سفارش شما ارسال شد!\\nنام: ${name}\\nتلفن: ${phone}\\nخدمت: ${service}\\n\\nبه زودی با شما تماس می‌گیریم ✅`, false);
+        }, 800);
+    } catch (error) {
+        alert("ارسال سفارش انجام نشد. لطفاً اتصال اینترنت را بررسی کنید و دوباره تلاش کنید.");
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+    }
 }
 
 // Close chat when clicking outside (optional enhancement)
