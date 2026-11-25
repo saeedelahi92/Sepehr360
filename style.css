@@ -850,3 +850,73 @@ body {
     .featured-video-mark { width:22px; height:22px; font-size:9px; }
     .featured-video video { max-height:145px; }
 }
+
+/* فراتر از پیکسل ها - پنجره ویدئو */
+.featured-video {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 276px;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 16px;
+    background: rgba(22,32,46,.96);
+    box-shadow: 0 12px 36px rgba(0,0,0,.32);
+    z-index: 950;
+    direction: rtl;
+    backdrop-filter: blur(10px);
+}
+
+.featured-video-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 2px 9px;
+}
+
+.featured-video-heading h2 {
+    margin: 0;
+    color: #F6F3EC;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.featured-video-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    color: white;
+    background: #7657D5;
+    font-size: 11px;
+}
+
+.featured-video video {
+    display: block;
+    width: 100%;
+    max-height: 210px;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #080d14;
+}
+
+@media (max-width: 600px) {
+    .featured-video {
+        right: 12px;
+        bottom: 12px;
+        width: 190px;
+        padding: 7px;
+        border-radius: 12px;
+    }
+
+    .featured-video-heading h2 {
+        font-size: 12px;
+    }
+
+    .featured-video video {
+        max-height: 145px;
+    }
+}
